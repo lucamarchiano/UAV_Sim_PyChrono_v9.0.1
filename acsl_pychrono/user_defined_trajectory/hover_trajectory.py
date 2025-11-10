@@ -50,7 +50,7 @@ class HoverTrajectory(BaseUserDefinedTrajectory):
     "Add hover point visualization to the Chrono body (mfloor)"
 
     # Define the position of the hover point in absolute coordinates
-    hover_position = chrono.ChVectorD(0, abs(self.altitude_trajectory) + mfloor_Yposition, 0)
+    hover_position = chrono.ChVector3d(0, abs(self.altitude_trajectory) + mfloor_Yposition, 0)
 
     # Create a sphere shape with a small radius
     sphere_shape = chrono.ChSphereShape()
@@ -60,6 +60,6 @@ class HoverTrajectory(BaseUserDefinedTrajectory):
     sphere_shape.SetColor(chrono.ChColor(0, 0, 0)) 
 
     # Attach the sphere shape to the floor at the hover point position
-    mfloor.AddVisualShape(sphere_shape, chrono.ChFrameD(hover_position))
+    mfloor.AddVisualShape(sphere_shape, chrono.ChFramed(hover_position))
 
 

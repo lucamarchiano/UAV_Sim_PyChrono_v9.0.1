@@ -12,6 +12,7 @@
 
 # Ignore .vs folder
 .vs/
+.vscode/
 
 # Ignore __pycache__ folder
 __pycache__/
@@ -25,4 +26,8 @@ DATA*.csv
 # Except the example file inside the logs directory
 !/logs/_example_workspace_log_20250517_172211.mat
 
+# Ignore output log file
+output.log
 
+# Ignore install directory
+install/

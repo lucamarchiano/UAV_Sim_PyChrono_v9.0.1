@@ -208,13 +208,13 @@ class Simulation:
     self.marker_pixhawk =chrono.ChMarker()
     self.marker_pixhawk.SetName('Coordinate System Pixhawk')
     self.m_frame.AddMarker(self.marker_pixhawk)
-    self.marker_pixhawk.ImposeAbsoluteTransform(chrono.ChFramed(self.pixhawk_csys.pos, self.pixhawk_csys.rot))
+    self.marker_pixhawk.ImposeAbsoluteTransform(chrono.ChFramed(self.pixhawk_csys))
     
     # Create a local reference system with origin in pixhawk and with Global Frame convention (Y up)
     self.marker_pixhawk_2 =chrono.ChMarker()
     self.marker_pixhawk_2.SetName('Coordinate System Pixhawk Global Frame convention')
     self.m_frame.AddMarker(self.marker_pixhawk_2)
-    self.marker_pixhawk_2.ImposeAbsoluteTransform(chrono.ChFramed(pixhawk_csys_2.pos, pixhawk_csys_2.rot))
+    self.marker_pixhawk_2.ImposeAbsoluteTransform(chrono.ChFramed(pixhawk_csys_2))
 
     # Rotation matrix that represents a rotation of plus pi/2 (90 degrees) around the x-axis
     self.RR = chrono.ChMatrix33d()
